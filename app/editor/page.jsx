@@ -169,6 +169,7 @@ export default function EditorPage() {
                 if (updateError) throw updateError;
 
                 alert("Post updated successfully!");
+                router.push("/");
             } else {
                 // Insert new post
                 const { data, error: insertError } = await supabase
