@@ -3,14 +3,6 @@ import { useState, useEffect, useRef } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 
-import EditorJS from "@editorjs/editorjs";
-import Header from "@editorjs/header";
-import Paragraph from "@editorjs/paragraph";
-import List from "@editorjs/list";
-import Quote from "@editorjs/quote";
-import Code from "@editorjs/code";
-import Image from "@editorjs/image";
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
@@ -45,6 +37,15 @@ export default function EditorPage() {
         const initEditor = async () => {
             // Prevent multiple initializations
             if (editorRef.current) return;
+
+            // Dynamically import EditorJS and its tools to prevent SSR issues
+            const EditorJS = (await import("@editorjs/editorjs")).default;
+            const Header = (await import("@editorjs/header")).default;
+            const Paragraph = (await import("@editorjs/paragraph")).default;
+            const List = (await import("@editorjs/list")).default;
+            const Quote = (await import("@editorjs/quote")).default;
+            const Code = (await import("@editorjs/code")).default;
+            const Image = (await import("@editorjs/image")).default;
 
             editorInstance = new EditorJS({
                 holder: "editorjs",
