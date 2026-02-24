@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🚀 Supabase Masterclass: Premium Blog Platform
 
-## Getting Started
+A state-of-the-art, full-stack blog application built with **Next.js 15**, **Supabase**, and **EditorJS**. This project features a stunning premium dark theme, secure authentication, and a powerful block-based editor.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+-   **🔐 Secure Authentication**: Complete auth flow using Supabase (Sign Up, Login, Logout) with protected routes via Next.js Middleware.
+-   **📝 Advanced Block Editor**: Integrated **EditorJS** supporting:
+    -   Rich text formatting
+    -   Custom headers and lists
+    -   Blockquotes and code snippets
+    -   **Image Uploads**: Direct upload to Supabase Storage with automatic URL generation.
+-   **🎨 Premium UI/UX**:
+    -   Sleek dark mode by default (`#050505`).
+    -   **Glassmorphism**: Backdrop blur effects on cards and navigation.
+    -   **Radial Gradients**: Dynamic background lighting for a premium feel.
+    -   Responsive design for all devices.
+-   **🛠️ Post Management**:
+    -   Create, Edit, and Delete posts.
+    -   Instant redirection and state updates.
+    -   Confirmation dialogs for destructive actions.
+-   **⚡ High Performance**: Built with Next.js App Router for optimal speed and SEO.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+-   **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+-   **Backend/Auth/Storage**: [Supabase](https://supabase.com/)
+-   **Editor**: [EditorJS](https://editorjs.io/)
+-   **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+-   **Components**: [Shadcn UI](https://ui.shadcn.com/)
+-   **Icons**: [Lucide React](https://lucide.dev/)
+-   **Theming**: [Next Themes](https://github.com/pacocoursey/next-themes)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Getting Started
 
-## Learn More
+### Prerequisites
 
-To learn more about Next.js, take a look at the following resources:
+-   Node.js 20.x or later
+-   A Supabase account and project
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/DhimanMajumdar/supabase-masterclass.git
+    cd supabase-masterclass
+    ```
 
-## Deploy on Vercel
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3.  **Set up Environment Variables**:
+    Create a `.env` file in the root directory and add your Supabase credentials:
+    ```env
+    NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+    NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4.  **Run the development server**:
+    ```bash
+    npm run dev
+    ```
+    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## 📂 Project Structure
+
+-   `/app`: Next.js App Router pages and layouts.
+-   `/components`: Reusable UI components (including Shadcn UI).
+-   `/lib/supabase`: Supabase client and middleware configurations.
+-   `/public`: Static assets.
+
+## 🛡️ Security
+
+The application uses **Next.js Middleware** to ensure that:
+-   Unauthenticated users cannot access the `/editor` or individual post pages.
+-   Users are automatically redirected to the login page when attempting to access protected content.
+
+---
+
+Built with ❤️ by [Dhiman Majumdar](https://github.com/DhimanMajumdar)
