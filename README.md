@@ -1,4 +1,4 @@
-# 🚀 Supabase Masterclass: Premium Blog Platform
+# 🚀 InkSpire: Premium Blog Platform
 
 A state-of-the-art, full-stack blog application built with **Next.js 15**, **Supabase**, and **EditorJS**. This project features a stunning premium dark theme, secure authentication, and a powerful block-based editor.
 
